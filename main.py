@@ -92,7 +92,10 @@ def divisors(integer):
         if integer % i == 0:
             result.append(i)
 
-    return result
+    if len(result) == 0:
+        return str(integer) + " is prime"
+    else:
+        return result
 
 
-print(divisors(253))
+print(divisors(13))
