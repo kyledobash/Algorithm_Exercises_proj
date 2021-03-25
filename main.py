@@ -52,3 +52,23 @@ print(count_bits(0))
 print(count_bits(4))
 print(count_bits(7))
 print(count_bits(9))
+
+
+def to_camel_case(text):
+    # iterate over input text
+    # if current element is a - or _
+    #     delete it
+    # return original text
+    result = ""
+
+    for i in range(0, len(text)):
+        if text[i] != "-" and text[i] != "_":
+            result = result + text[i]
+        else:
+            result = result + text[i + 1].upper()
+            i = i + 2
+
+    return result
+
+
+print(to_camel_case("kyle-dobash"))
