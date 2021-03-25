@@ -54,21 +54,33 @@ print(count_bits(7))
 print(count_bits(9))
 
 
-def to_camel_case(text):
-    # iterate over input text
-    # if current element is a - or _
-    #     delete it
-    # return original text
-    result = ""
+# def to_camel_case(text):
+#     result = ""
+#
+#     for i in range(0, len(text)):
+#         if i > len(text):
+#             return result
+#         elif text[i] != "-" and text[i] != "_":
+#             result = result + text[i]
+#         else:
+#             result = result + text[i + 1].upper()
+#             text = text.replace(text[i + 1], "")
+#
+#     return result
+#
+#
+# print(to_camel_case("kyle-dobash"))
 
-    for i in range(0, len(text)):
-        if text[i] != "-" and text[i] != "_":
-            result = result + text[i]
+
+def filter_list(l):
+    result = []
+    for element in l:
+        if isinstance(element, str):
+            continue;
         else:
-            result = result + text[i + 1].upper()
-            i = i + 2
+            result.append(element)
 
     return result
 
 
-print(to_camel_case("kyle-dobash"))
+print(filter_list([1,2,'a','b']))
