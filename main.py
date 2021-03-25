@@ -84,3 +84,15 @@ def filter_list(l):
 
 
 print(filter_list([1,2,'a','b']))
+
+
+def divisors(integer):
+    result = []
+    for i in range(2, integer):
+        if integer % i == 0:
+            result.append(i)
+
+    return result
+
+
+print(divisors(253))
