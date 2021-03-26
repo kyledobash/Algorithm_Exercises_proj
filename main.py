@@ -99,3 +99,21 @@ def divisors(integer):
 
 
 print(divisors(13))
+
+
+# def is_valid_walk(walk):
+#     counter = 0
+#
+#     for direction in walk:
+#         counter += 1
+#
+#     if counter * 2 == 10:
+#         return True
+#     else:
+#         return False
+#
+# print(is_valid_walk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']))
+# print(is_valid_walk(['w','e','w','e','w','e','w','e','w','e','w','e']))
+# print((['w']), 'should return False')
+# print(is_valid_walk(['n','n','n','s','n','s','n','s','n','s']), 'should return False')
+
