@@ -72,33 +72,33 @@ print(count_bits(9))
 # print(to_camel_case("kyle-dobash"))
 
 
-def filter_list(l):
-    result = []
-    for element in l:
-        if isinstance(element, str):
-            continue;
-        else:
-            result.append(element)
-
-    return result
-
-
-print(filter_list([1,2,'a','b']))
-
-
-def divisors(integer):
-    result = []
-    for i in range(2, integer):
-        if integer % i == 0:
-            result.append(i)
-
-    if len(result) == 0:
-        return str(integer) + " is prime"
-    else:
-        return result
-
-
-print(divisors(13))
+# def filter_list(l):
+#     result = []
+#     for element in l:
+#         if isinstance(element, str):
+#             continue;
+#         else:
+#             result.append(element)
+#
+#     return result
+#
+#
+# print(filter_list([1,2,'a','b']))
+#
+#
+# def divisors(integer):
+#     result = []
+#     for i in range(2, integer):
+#         if integer % i == 0:
+#             result.append(i)
+#
+#     if len(result) == 0:
+#         return str(integer) + " is prime"
+#     else:
+#         return result
+#
+#
+# print(divisors(13))
 
 
 # def is_valid_walk(walk):
@@ -116,4 +116,26 @@ print(divisors(13))
 # print(is_valid_walk(['w','e','w','e','w','e','w','e','w','e','w','e']))
 # print((['w']), 'should return False')
 # print(is_valid_walk(['n','n','n','s','n','s','n','s','n','s']), 'should return False')
+
+def tickets(people):
+    wallet = 0
+    for payment in people:
+        if payment == 25:
+            wallet += 25
+        elif payment == 50 and wallet >= 25:
+            wallet += 25
+        elif payment == 100 and wallet >= 75:
+            wallet += 25
+        else:
+            return "NO"
+    return "YES"
+
+
+print(tickets([25, 25, 50]))
+print(tickets([25, 100]))
+print(tickets([25, 25, 50, 50, 100]))
+
+
+
+
 
